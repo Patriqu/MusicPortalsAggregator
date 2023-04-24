@@ -1,0 +1,35 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music Portals Aggregator</title>
+</head>
+
+<body>
+<div class="container-fluid">
+    <h3 class="display-3">Music Portals Aggregator in Spring Boot</h3>
+    <p class="lead">This page will display liked videos from my YouTube profile, last played songs from my Spotify
+        profile, and last scrobbles from my Last.fm profile.
+    </p>
+
+    <div id="contents-main">
+        <div class="lead">
+            <span th:text="${event}"></span>
+
+            <u>List of saved videos from my "Spring Framework 6 / Spring Boot 3" playlist on YouTube:</u>
+            <div id="videos" th:each="video : ${springTitlesYoutube}">
+                <ul th:text="${video}"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+<script type="text/babel">
+</script>
+</body>
+</html>

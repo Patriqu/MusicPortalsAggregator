@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    generate-unique-name: false
+    name: content
+  h2:
+    console:
+      enabled: false
+
+spotify:
+  authorizeUri: "https://accounts.spotify.com/authorize"
+youtube:
+  springPlaylistId: PLbCvOPoX4TBkiXoIcVZnIvaEPNu571_zc
