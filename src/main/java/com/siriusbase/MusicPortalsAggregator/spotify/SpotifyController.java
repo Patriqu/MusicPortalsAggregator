@@ -2,13 +2,12 @@ package com.siriusbase.MusicPortalsAggregator.spotify;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
-@Controller
+@RestController
 @RequestMapping("/spotify")
 public class SpotifyController {
     SpotifyService spotifyService;
@@ -18,13 +17,11 @@ public class SpotifyController {
     }
 
     @GetMapping(value = "/artist", produces = MediaType.TEXT_HTML_VALUE)
-    @ResponseBody
     String fetchArtist() {
         return spotifyService.fetchArtistData();
     }
 
     @GetMapping(value = "/played", produces = MediaType.TEXT_HTML_VALUE)
-    @ResponseBody
     String fetchLastPlayed() {
         return spotifyService.fetchLastPlayed();
     }

@@ -7,6 +7,6 @@ spring:
       enabled: false
 
 spotify:
-  authorizeUri: "https://accounts.spotify.com/authorize"
+  authorizeUri: https://accounts.spotify.com/authorize
 youtube:
   springPlaylistId: PLbCvOPoX4TBkiXoIcVZnIvaEPNu571_zc
