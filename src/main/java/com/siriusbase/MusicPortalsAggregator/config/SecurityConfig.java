@@ -10,7 +10,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
-@Profile("prod")
+@Profile("dev")
 public class SecurityConfig {
     @Bean
     UserDetailsService userDetailsService() {
@@ -19,6 +19,7 @@ public class SecurityConfig {
                 .password("{noop}ab")
                 .roles("admin")
                 .build();
+
 
         return new InMemoryUserDetailsManager(userDetails);
     }
